@@ -1,0 +1,184 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  touch-action: pan-y;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#bg {
+  position: relative;
+  height: 100%;
+  background-image: url("../用户中心.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-filter: blur(10px);
+  /* Chrome, Opera */
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+#app {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 12px;
+  position: relative;
+}
+
+header {
+  height: 3.125rem;
+  font-size: 1.25rem;
+  color: yellowgreen;
+}
+
+section {
+  flex: 1;
+}
+
+footer {
+  height: 4.375rem;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8.125rem;
+  height: 0.625rem;
+  margin: 0 auto;
+  line-height: 0.625rem;
+  color: #FFF;
+}
+
+.progress-container .progress-bar {
+  position: relative;
+  margin: 0 0.625rem;
+  width: 6.25rem;
+  height: 0.15625rem;
+  background-color: #383428;
+}
+
+.progress-container .progress-bar > div {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #FFCD32;
+}
+
+.progress-container .progress-bar span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 0.25rem;
+  height: 0.25rem;
+  border: 0.125rem solid #FFF;
+  background-color: #FFCD32;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.controls-container {
+  margin-top: 1.875rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.controls-container > div {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  line-height: 0.8125rem;
+  border: 1px solid #FFCD32;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.controls-container .iconfont {
+  font-size: 0.4375rem;
+  color: #FFCD32;
+}
+
+.controls-container .play-or-pause {
+  width: 1.125rem;
+  height: 1.125rem;
+  line-height: 1.125rem;
+}
+
+.controls-container .play-or-pause .iconfont {
+  font-size: 0.5625rem;
+}
+
+.controls-container .play-or-pause span {
+  display: none;
+}
+
+.controls-container .play-or-pause .show {
+  display: inline;
+}
+
+.controls-container #volume {
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  position: relative;
+}
+
+.controls-container #volume > .iconfont {
+  font-size: 0.3125rem;
+}
+
+.controls-container #volume .progress-bar-v {
+  position: absolute;
+  bottom: 0.78125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5625rem;
+  width: 0.0625rem;
+  background-color: #FFF;
+  display: none;
+}
+
+.controls-container #volume .progress-bar-v.active {
+  display: block;
+}
+
+.controls-container #volume .progress-bar-v > div {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 50%;
+  background-color: #FFCD32;
+}
+
+.controls-container #volume .progress-bar-v span {
+  position: absolute;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border: 0.09375rem solid #FFF;
+  background-color: #FFCD32;
+  border-radius: 50%;
+  overflow: hidden;
+}

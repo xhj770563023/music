@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/flexible.js"></script>
+    <script src="./js/fastclick.js"></script>
+    <link rel="stylesheet" href="./css/fonts1/iconfont.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            FastClick.attach(document.body);
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="bg"></div>
+    <div id="app">
+        <header id="header"></header>
+        <section>
+
+        </section>
+        <footer>
+            <div class="progress-container">
+                <div class="current-time" id="cur-time">00:00</div>
+                <div class="progress-bar">
+                    <div id="pro-bar">
+                        <span id="pro-btn"></span>
+                    </div>
+                </div>
+                <div class="end-time" id="end-time">00:00</div>
+            </div>
+
+            <div class="controls-container">
+                <div class="loop-type">
+                    <span class="iconfont icon-set"></span>
+                </div>
+                <div id="prev">
+                    <span class="iconfont icon-ttpodicon1" ></span>
+                </div>
+                <div class="play-or-pause" id="play">
+                    <span class="iconfont icon-bofang1 play show"></span>
+                    <span class="iconfont icon-zanting2 pause"></span>
+                </div>
+                <div id="next">
+                    <span class="iconfont icon-ttpodicon"></span>
+                </div>
+                <div id="volume">
+                    <span class="iconfont icon-42" id="muted"></span>
+                    <div class="progress-bar-v" id="progress_bar_v">
+                        <div id="vol-bar">
+                            <span id="vol-btn"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<!-- <script src="./js/music.js"></script> -->
+<script src="./js/musicEvent.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/eruda.min.js"></script>
+<script>
+    eruda.init();
+</script>
+</html>

@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    touch-action: pan-y;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+
+@function px2rem($px) {
+    @return $px / 32 * 1rem;
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+#bg {
+    position: relative;
+    height: 100%;
+    background-image: url('../用户中心.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: blur(10px);
+    /* Chrome, Opera */
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    z-index: 0;
+
+}
+
+#app {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background-color: #FFF;
+}
+
+body {
+    font-size: 12px;
+    position: relative;
+
+}
+
+
+header {
+    height: px2rem(100);
+    font-size: px2rem(40);
+    color:yellowgreen;
+}
+
+section {
+    flex: 1;
+}
+
+footer {
+    height: px2rem(140);
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: px2rem(260);
+    height: px2rem(20);
+    margin: 0 auto;
+    line-height: px2rem(20);
+    color: #FFF;
+
+    .progress-bar {
+        position: relative;
+        margin: 0 px2rem(20);
+        width: px2rem(200);
+        height: px2rem(5);
+        background-color: #383428;
+
+        >div {
+            position: absolute;
+            width: 0;
+            height: 100%;
+            background-color: #FFCD32
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+            width: px2rem(8);
+            height: px2rem(8);
+            border: px2rem(4) solid #FFF;
+            background-color: #FFCD32;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
+.controls-container {
+    margin-top: px2rem(60);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    >div {
+        
+        width: px2rem(26);
+        height: px2rem(26);
+        line-height: px2rem(26);
+        border: 1px solid #FFCD32;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .iconfont {
+        font-size: px2rem(14);
+        color: #FFCD32;
+    }
+
+    .play-or-pause {
+       width: px2rem(36);
+       height: px2rem(36);
+       line-height: px2rem(36);
+        .iconfont {
+            font-size: px2rem(18);
+        }
+        span {
+            display: none;
+        }
+        .show {
+            display: inline;
+        }
+        
+    }
+
+    #volume {
+        width: px2rem(16);
+        height: px2rem(16);
+        line-height: px2rem(16);
+        
+        
+        >.iconfont {
+            font-size: px2rem(10);
+        }
+        position: relative;
+        .progress-bar-v {
+            position: absolute;
+            bottom: px2rem(25);
+            left: 50%;
+            transform: translateX(-50%);
+            height: px2rem(50);
+            width: px2rem(2);
+            background-color: #FFF;
+            display: none;
+            &.active{
+                display: block;
+            }
+            >div {
+                position: absolute;
+                bottom: 0%;
+                width: 100%;
+                height: 50%;
+                background-color: #FFCD32
+            }
+    
+            span {
+                position: absolute;
+                top: 0%;
+                // right: 50%;
+                transform: translate(-50%, -50%);
+                width: px2rem(6);
+                height: px2rem(6);
+                border: px2rem(3) solid #FFF;
+                background-color: #FFCD32;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+    }
+}
